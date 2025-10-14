@@ -1,8 +1,7 @@
-from textnode import TextNode, TextType
+from utils import copy_recursive
 
 def main():
-    node = TextNode("dummy", TextType.LINK, "http:://localhost")
-    print(node)
+    copy_recursive("static", "public")
 
 if __name__ == "__main__":
     main()
