@@ -56,7 +56,7 @@ def block_to_html_node(block):
             return ParentNode("h" + str(depth), text_to_html_nodes(stripped))
         case BlockType.QUOTE:
             stripped = "\n".join(line.lstrip(">").lstrip() for line in block.splitlines())
-            return ParentNode("blockquote", [ParentNode("p", text_to_html_nodes(stripped))])
+            return ParentNode("blockquote", text_to_html_nodes(stripped))
         case BlockType.UNORDERED_LIST:
             children = list_items_to_html_nodes(block, "-")
             return ParentNode("ul", children)

@@ -113,7 +113,7 @@ the **same** even with inline stuff
         html = node.to_html()
         self.assertEqual(
             html,
-            "<div><blockquote><p>This is a quote with multiple lines</p></blockquote></div>",
+            "<div><blockquote>This is a quote with multiple lines</blockquote></div>",
         )
 
     def test_ordered_list(self):
